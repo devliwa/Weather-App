@@ -1,0 +1,110 @@
+/* === Global Layout === */
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #f9fafc 0%, #eef1f6 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+/* === Logo Styling === */
+.logo {
+  height: 6em;
+  padding: 1em;
+  transition: transform 0.5s ease, filter 0.3s ease;
+  will-change: transform, filter;
+}
+
+/* Add a smooth hover animation with slight tilt and glow */
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 1.5em rgba(100, 108, 255, 0.6));
+}
+
+/* React logo variant glow */
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em rgba(97, 218, 251, 0.7));
+}
+
+/* === Spin animation (optional, smoother + slower) === */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 25s linear;
+  }
+}
+
+/* === Card Styling === */
+.card {
+  padding: 2.5em;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift effect */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* === Text Styles === */
+h1, h2, h3 {
+  color: #2b2d42;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.5px;
+}
+
+p {
+  color: #4a4a4a;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0.5em auto;
+}
+
+a {
+  color: #646cff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #4a54e1;
+}
+
+/* === Docs note === */
+.read-the-docs {
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+/* === Responsive Tweaks === */
+@media (max-width: 768px) {
+  #root {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  .logo {
+    height: 5em;
+  }
+}
