@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [searchInput, setSearchInput] = useState("");
   const [weatherData, setWeatherData] = useState(null);
-  const [city, setCity] = useState("london");
+  const [city, setCity] = useState("calgary");
   const [forecast, setForecast] = useState([]);
   const [error, setError] = useState(null);
 
